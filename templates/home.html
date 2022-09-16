@@ -1,1 +1,52 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Liver Cirrohsis Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Age" placeholder="Age" required="required" /><br>
+    	<input type="text" name="Bilirubin" placeholder="Bilirubin" required="required" /><br>
+        <input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" /><br>
+        <input type="text" name="Albumin" placeholder="Albumin" required="required" /><br>
+        <input type="text" name="Copper" placeholder="Copper" required="required" /><br>
+        <input type="text" name="Alk_Phos" placeholder="Alk_Phos" required="required" /><br>
+        <input type="text" name="SGOT" placeholder="SGOT"  required="required" /><br>
+        <input type="text" name="Tryglicerides" placeholder="Tryglicerides" required="required" /><br>
+        <input type="text" name="Platelets" placeholder="Platelets" required="required" /><br>
+        <input type="text" name="Prothrombin" placeholder="Prothrombin"  required="required" /><br>
+        <input type="text" name="Drug_Placebo" placeholder="Drug_Placebo"required="required" /><br>
+        <input type="text" name="Sex_M" placeholder="Sex_M"  required="required" /><br>
+        <input type="text" name="Ascites_Y" placeholder="Ascites_Y" required="required" /><br>
+        <input type="text" name="Hepatomegaly_Y" placeholder="Hepatomegaly_Y" required="required" /><br>
+        <input type="text" name="Spiders_Y" placeholder="Spiders_Y" required="required" /><br>
+        <input type="text" name="Edema_S" placeholder="Edema_S" required="required" /><br>
+        <input type="text" name="Edema_Y" placeholder="Edema_Y" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
